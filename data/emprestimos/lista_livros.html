@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,%3Csvg%20viewBox='0%200%2015%2015'%20version='1.1'%20id='library'%20xmlns='http://www.w3.org/2000/svg'%20fill='white'%3E%3Cpath%20d='M1.0819,9.9388C0.9871,9.867,1.0007,9.7479,1.0007,9.7479L1.5259,3.5c0,0,0.0082-0.0688,0.0388-0.104C1.584,3.374,1.6084,3.342,1.6544,3.3232C2.1826,3.1072,5.0537,1.5519,6.5,3c0.2397,0.2777,0.4999,0.6876,0.4999,1v5.2879c0,0,0.0062,0.1122-0.0953,0.1801c-0.0239,0.016-0.124,0.0616-0.242,0.0026c-2.2253-1.1134-4.711,0.1546-5.3381,0.4871C1.1987,10.0244,1.1006,9.9531,1.0819,9.9388z%20M13.6754,9.9577c-0.6271-0.3325-3.1128-1.6005-5.3381-0.4871c-0.118,0.059-0.2181,0.0134-0.242-0.0026C7.9939,9.4001,8.0001,9.2879,8.0001,9.2879V4c0-0.3124,0.2602-0.7223,0.4999-1c1.4463-1.4481,4.2991,0.1071,4.8273,0.3232c0.046,0.0188,0.0704,0.0508,0.0897,0.0728C13.4476,3.4312,13.4558,3.5,13.4558,3.5l0.5435,6.2479c0,0,0.0136,0.1191-0.0812,0.1909C13.8994,9.9531,13.8013,10.0244,13.6754,9.9577z%20M8.8647,12.6863c0.0352-0.0085,0.0964-0.0443,0.1179-0.0775c0.0236-0.0364,0.0378-0.0617,0.0423-0.1088c0.0495-0.9379,1.6245-1.8119,4.6477-0.0298c0.0775,0.0441,0.1666,0.0396,0.2425-0.0155C14.0014,12.392,14,12.2859,14,12.2859v-0.5542c0,0,0.0003-0.0764-0.0272-0.1184c-0.0205-0.0312-0.0476-0.0643-0.0926-0.0858c-2.0254-1.3145-4.5858-1.8972-5.8854-0.1592c-0.0181,0.0423-0.0353,0.0613-0.0728,0.0905C7.8654,11.5028,7.7964,11.5,7.7964,11.5H7.2109c0,0-0.069,0.0028-0.1256-0.0412c-0.0375-0.0292-0.0547-0.0482-0.0728-0.0905c-1.2996-1.738-3.86-1.1828-5.8854,0.1317c-0.045,0.0215-0.0721,0.0546-0.0926,0.0858c-0.0275,0.042-0.0272,0.1184-0.0272,0.1184v0.5542c0,0-0.0014,0.1061,0.0849,0.1688c0.0759,0.0551,0.165,0.0596,0.2425,0.0155c3.0232-1.7821,4.5982-0.8806,4.6477,0.0573c0.0045,0.0471,0.0187,0.0724,0.0423,0.1088c0.0215,0.0332,0.0827,0.069,0.1179,0.0775C6.8645,12.8656,7.9112,12.9363,8.8647,12.6863z'/%3E%3C/svg%3E">
+    <title>Seus Empréstimos - Biblioteca</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #b22222;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+            padding: 40px;
+            max-width: 700px;
+            width: 100%;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .header {
+            margin-bottom: 30px;
+            animation: slideDown 0.8s ease-out 0.2s both;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .greeting {
+            font-size: 24px;
+            color: #1e1e1e;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .greeting .user-name {
+            color: #b22222;
+            font-weight: 700;
+        }
+
+        h1 {
+            font-size: 36px;
+            color: #1e1e1e;
+            margin-bottom: 15px;
+            font-weight: 700;
+            animation: slideUp 0.8s ease-out 0.4s both;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .instruction {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 30px;
+            line-height: 1.6;
+            animation: slideUp 0.8s ease-out 0.6s both;
+        }
+
+        .books-container {
+            max-height: 500px;
+            overflow-y: auto;
+            animation: slideUp 0.8s ease-out 0.8s both;
+        }
+
+        .books-container::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .books-container::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+
+        .books-container::-webkit-scrollbar-thumb {
+            background: #b22222;
+            border-radius: 10px;
+        }
+
+        .books-container::-webkit-scrollbar-thumb:hover {
+            background: #dc3545;
+        }
+
+        .book-item {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            padding: 20px;
+            margin-bottom: 15px;
+            background: #f9f9f9;
+            border-left: 4px solid #b22222;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            animation: itemSlideIn 0.6s ease-out forwards;
+        }
+
+        .book-item:nth-child(1) {
+            animation-delay: 1s;
+        }
+
+        .book-item:nth-child(2) {
+            animation-delay: 1.1s;
+        }
+
+        .book-item:nth-child(3) {
+            animation-delay: 1.2s;
+        }
+
+        @keyframes itemSlideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .book-item:hover {
+            background: #f0f0f0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transform: translateX(5px);
+        }
+
+        .book-cover {
+            width: 80px;
+            height: 120px;
+            background: linear-gradient(135deg, #b22222 0%, #dc3545 100%);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 12px;
+            font-weight: 600;
+            text-align: center;
+            padding: 8px;
+            flex-shrink: 0;
+            box-shadow: 0 4px 10px rgba(178, 34, 34, 0.3);
+        }
+
+        .book-info {
+            flex: 1;
+            text-align: left;
+        }
+
+        .book-title {
+            font-size: 18px;
+            color: #1e1e1e;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .book-due-date {
+            font-size: 14px;
+            color: #666;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .book-due-date.overdue {
+            color: #b22222;
+            font-weight: 600;
+        }
+
+        .due-date-icon {
+            display: inline-block;
+            width: 4px;
+            height: 4px;
+            background: currentColor;
+            border-radius: 50%;
+        }
+
+        .return-button {
+            background: linear-gradient(135deg, #b22222 0%, #dc3545 100%);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(178, 34, 34, 0.3);
+            flex-shrink: 0;
+        }
+
+        .return-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(178, 34, 34, 0.4);
+        }
+
+        .return-button:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 8px rgba(178, 34, 34, 0.3);
+        }
+
+        .btn-finalizar {
+            background: linear-gradient(135deg, #b22222 0%, #dc3545 100%);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(178, 34, 34, 0.3);
+            flex-shrink: 0;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            .instruction {
+                font-size: 16px;
+            }
+
+            .book-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .book-cover {
+                width: 100%;
+            }
+
+            .return-button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="greeting">Olá, <span class="user-name"></span>!</div>
+        </div>
+
+        <h1>Seus Empréstimos</h1>
+
+        <p class="instruction" id="instruction-message"> Selecione o livro que você deseja devolver agora.</p>
+
+        <div class="books-container"></div>
+
+        <button class="btn-finalizar" onclick="finalizarSessao()"> 🔒 Finalizar Sessão</button>
+    </div>
+    <script src="lista_livros.js"></script>
+</body>
+</html>

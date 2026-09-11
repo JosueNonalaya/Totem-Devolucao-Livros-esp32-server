@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,%3Csvg%20viewBox='0%200%2015%2015'%20version='1.1'%20id='library'%20xmlns='http://www.w3.org/2000/svg'%20fill='white'%3E%3Cpath%20d='M1.0819,9.9388C0.9871,9.867,1.0007,9.7479,1.0007,9.7479L1.5259,3.5c0,0,0.0082-0.0688,0.0388-0.104C1.584,3.374,1.6084,3.342,1.6544,3.3232C2.1826,3.1072,5.0537,1.5519,6.5,3c0.2397,0.2777,0.4999,0.6876,0.4999,1v5.2879c0,0,0.0062,0.1122-0.0953,0.1801c-0.0239,0.016-0.124,0.0616-0.242,0.0026c-2.2253-1.1134-4.711,0.1546-5.3381,0.4871C1.1987,10.0244,1.1006,9.9531,1.0819,9.9388z%20M13.6754,9.9577c-0.6271-0.3325-3.1128-1.6005-5.3381-0.4871c-0.118,0.059-0.2181,0.0134-0.242-0.0026C7.9939,9.4001,8.0001,9.2879,8.0001,9.2879V4c0-0.3124,0.2602-0.7223,0.4999-1c1.4463-1.4481,4.2991,0.1071,4.8273,0.3232c0.046,0.0188,0.0704,0.0508,0.0897,0.0728C13.4476,3.4312,13.4558,3.5,13.4558,3.5l0.5435,6.2479c0,0,0.0136,0.1191-0.0812,0.1909C13.8994,9.9531,13.8013,10.0244,13.6754,9.9577z%20M8.8647,12.6863c0.0352-0.0085,0.0964-0.0443,0.1179-0.0775c0.0236-0.0364,0.0378-0.0617,0.0423-0.1088c0.0495-0.9379,1.6245-1.8119,4.6477-0.0298c0.0775,0.0441,0.1666,0.0396,0.2425-0.0155C14.0014,12.392,14,12.2859,14,12.2859v-0.5542c0,0,0.0003-0.0764-0.0272-0.1184c-0.0205-0.0312-0.0476-0.0643-0.0926-0.0858c-2.0254-1.3145-4.5858-1.8972-5.8854-0.1592c-0.0181,0.0423-0.0353,0.0613-0.0728,0.0905C7.8654,11.5028,7.7964,11.5,7.7964,11.5H7.2109c0,0-0.069,0.0028-0.1256-0.0412c-0.0375-0.0292-0.0547-0.0482-0.0728-0.0905c-1.2996-1.738-3.86-1.1828-5.8854,0.1317c-0.045,0.0215-0.0721,0.0546-0.0926,0.0858c-0.0275,0.042-0.0272,0.1184-0.0272,0.1184v0.5542c0,0-0.0014,0.1061,0.0849,0.1688c0.0759,0.0551,0.165,0.0596,0.2425,0.0155c3.0232-1.7821,4.5982-0.8806,4.6477,0.0573c0.0045,0.0471,0.0187,0.0724,0.0423,0.1088c0.0215,0.0332,0.0827,0.069,0.1179,0.0775C6.8645,12.8656,7.9112,12.9363,8.8647,12.6863z'/%3E%3C/svg%3E">
+    <title>Devolução de Livros - Biblioteca</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #b22222;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+            padding: 60px 40px;
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+            animation: fadeIn 0.8s ease-out;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .logo-wrapper {
+            margin-bottom: 40px;
+            animation: slideDown 0.8s ease-out 0.2s both;
+        }
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .logo {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #b22222 0%, #dc3545 100%);
+            border-radius: 15px;
+            animation: pulse 2s ease-in-out infinite;
+        }
+        .logo svg {
+            width: 50px;
+            height: 50px;
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+        }
+        .library-name {
+            font-size: 16px;
+            color: #666;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+        h1 {
+            font-size: 48px;
+            color: #1e1e1e;
+            margin-bottom: 20px;
+            font-weight: 700;
+            animation: slideUp 0.8s ease-out 0.4s both;
+        }
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .instruction {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 30px;
+            line-height: 1.6;
+            animation: slideUp 0.8s ease-out 0.6s both;
+        }
+        .highlight {
+            color: #b22222;
+            font-weight: 600;
+        }
+        
+        /* Estilos para o input e botão */
+        .input-section {
+            margin: 30px 0;
+            animation: slideUp 0.8s ease-out 0.7s both;
+        }
+        
+        #codigoInput {
+            padding: 12px 20px;
+            font-size: 16px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            width: 250px;
+            margin-right: 10px;
+            transition: border-color 0.3s;
+        }
+        
+        #codigoInput:focus {
+            outline: none;
+            border-color: #b22222;
+        }
+        
+        #entrar {
+            padding: 12px 30px;
+            font-size: 16px;
+            background: linear-gradient(135deg, #b22222 0%, #dc3545 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        #entrar:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(178, 34, 34, 0.3);
+        }
+        
+        #entrar:active {
+            transform: translateY(0);
+        }
+        
+        .card-reader-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            justify-content: center;
+            animation: slideUp 0.8s ease-out 0.8s both;
+            margin-top: 50px;
+        }
+        .card-reader-visual {
+            position: relative;
+            width: 120px;
+            height: 180px;
+        }
+        .card {
+            width: 120px;
+            height: 100px;
+            background: linear-gradient(90deg, #b22222 0%, #dc3545 100%);
+            border-radius: 8px;
+            position: absolute;
+            top: -80px;
+            left: 0;
+            box-shadow: 0 10px 30px rgba(178, 34, 34, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            font-size: 12px;
+            animation: cardApproachTop 2s ease-in-out infinite;
+            z-index: 2;
+        }
+        @keyframes cardApproachTop {
+            0%,
+            100% {
+                transform: translateY(-10px);
+                opacity: 0.8;
+            }
+            50% {
+                transform: translateY(60px);
+                opacity: 1;
+                box-shadow: 0 15px 40px rgba(178, 34, 34, 0.4);
+            }
+        }
+        .card-reader {
+            width: 120px;
+            height: 180px;
+            background: #2a2a2a;
+            border-radius: 12px;
+            border: 3px solid #b22222;
+            position: relative;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            z-index: 1;
+        }
+        .card-reader::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #b22222, #dc3545, #b22222);
+            border-radius: 2px;
+            animation: readerGlow 2s ease-in-out infinite;
+        }
+        @keyframes readerGlow {
+            0%,
+            100% {
+                opacity: 0.5;
+                box-shadow: 0 0 10px rgba(178, 34, 34, 0.5);
+            }
+            50% {
+                opacity: 1;
+                box-shadow: 0 0 20px rgba(178, 34, 34, 0.8);
+            }
+        }
+        .arrow {
+            font-size: 40px;
+            color: #b22222;
+        }
+        
+        .btn-cancelar {
+            background: linear-gradient(135deg, #b22222 0%, #dc3545 100%);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(178, 34, 34, 0.3);
+            flex-shrink: 0;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 40px 30px;
+            }
+            h1 {
+                font-size: 36px;
+            }
+            .instruction {
+                font-size: 18px;
+            }
+            .arrow {
+                font-size: 32px;
+            }
+            #codigoInput {
+                width: 180px;
+                margin-right: 5px;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo-wrapper">
+            <div class="logo">
+                <svg viewBox="0 0 20 20" id="meteor-icon-kit__solid-books" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M1 4H5C5.55228 4 6 4.44772 6 5V19C6 19.5523 5.55228 20 5 20H1C0.44772 20 0 19.5523 0 19V5C0 4.44772 0.44772 4 1 4zM2 13V17C2 17.5523 2.44772 18 3 18C3.55228 18 4 17.5523 4 17V13C4 12.4477 3.55228 12 3 12C2.44772 12 2 12.4477 2 13zM8 0H12C12.5523 0 13 0.44772 13 1V19C13 19.5523 12.5523 20 12 20H8C7.44772 20 7 19.5523 7 19V1C7 0.44772 7.44772 0 8 0zM9 11V17C9 17.5523 9.4477 18 10 18C10.5523 18 11 17.5523 11 17V11C11 10.4477 10.5523 10 10 10C9.4477 10 9 10.4477 9 11zM15 2H19C19.5523 2 20 2.44772 20 3V19C20 19.5523 19.5523 20 19 20H15C14.4477 20 14 19.5523 14 19V3C14 2.44772 14.4477 2 15 2zM16 15V17C16 17.5523 16.4477 18 17 18C17.5523 18 18 17.5523 18 17V15C18 14.4477 17.5523 14 17 14C16.4477 14 16 14.4477 16 15z"
+                            fill="#ffffff"></path>
+                    </g>
+                </svg>
+            </div>
+            <div class="library-name">Biblioteca</div>
+        </div>
+
+        <h1>Aproxime o Livro: 
+            <br> 
+        <p id="livroSelecionado" style="color: #b22222; font-size: 40px;"></p>
+        no sensor abaixo</h1>
+        <button id="cancelar" class="btn-cancelar">Cancelar operação?</button>
+        
+        <div class="card-reader-section">
+            <span ><h1 class="arrow">↓</h1></span>
+        </div>
+
+    </div>
+    <script src="lerlivro.js"></script>
+</body>
+
+</html>

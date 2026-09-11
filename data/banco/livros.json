@@ -1,0 +1,30 @@
+{
+  "131FB12": {
+    "titulo": "O Senhor dos Anéis",
+    "emprestado": "DBD817B4"
+  },
+
+  "FD42324": {
+    "titulo": "O Hobbit",
+    "emprestado": "DBD817B4"
+  },
+  
+  "livro3": {
+    "titulo": "Tom Sawyer",
+    "emprestado": null
+  },
+  "livro4": {
+    "titulo": "Oliver Twist",
+    "emprestado": null
+  },
+
+  "livro5": {
+    "titulo": "Montesquieu",
+    "emprestado": null
+  },
+  
+  "livro6": {
+    "titulo": "The Bible",
+    "emprestado": null
+  }
+}

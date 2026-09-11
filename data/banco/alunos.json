@@ -1,0 +1,16 @@
+{
+  "DBD817B4": {
+    "nome": "Maria dos Santos",
+    "livros": ["131FB12", "FD42324"]
+  },
+
+  "2B3A3AB4": {
+    "nome": "Joao Silva",
+    "livros": ["livro4","livro5","livro6"]
+  },
+  
+  "usuario3": {
+    "nome": "Pedro",
+    "livros": []
+  }
+}

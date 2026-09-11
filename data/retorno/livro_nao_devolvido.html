@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sucesso na Devolução - Biblioteca</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #b22222;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+            padding: 40px;
+            max-width: 700px;
+            width: 100%;
+            animation: fadeIn 0.8s ease-out;
+            text-align: center;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Animação de pulso para o ícone de sucesso */
+        .error-icon {
+            font-size: 100px;
+            color: #f30101;
+            animation: errorShake 0.4s ease-in-out both;
+            display: inline-block;
+        }
+
+        @keyframes successBounce {
+            0% {
+                opacity: 0;
+                transform: scale(0.5) translateY(-30px);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        }
+
+        h1 {
+            font-size: 48px;
+            color: #1e1e1e;
+            margin-bottom: 20px;
+            font-weight: 700;
+            animation: slideUp 0.8s ease-out 0.4s both;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .confirmation-text {
+            font-size: 20px;
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.6;
+            animation: slideUp 0.8s ease-out 0.6s both;
+        }
+
+        .book-title-confirmation {
+            color: #b22222;
+            font-weight: 700;
+        }
+
+        /* Espaçador antes dos botões */
+        .button-spacer {
+            margin-top: 40px;
+            animation: slideUp 0.8s ease-out 0.8s both;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 15px;
+            flex-direction: column;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
+        }
+
+        .btn-primary:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 8px rgba(40, 167, 69, 0.3);
+        }
+
+        .btn-secondary {
+            background: linear-gradient(135deg, #6c757d 0%, #5a6268 100%);
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(108, 117, 125, 0.4);
+        }
+
+        .btn-secondary:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 8px rgba(108, 117, 125, 0.3);
+        }
+
+        /* Auto-dismiss com mensagem temporária */
+        .auto-dismiss-notice {
+            font-size: 14px;
+            color: #999;
+            margin-top: 20px;
+            animation: fadeIn 0.8s ease-out 1.2s both;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 36px;
+            }
+
+            .success-icon {
+                font-size: 80px;
+            }
+
+            .confirmation-text {
+                font-size: 18px;
+            }
+
+            .button-group {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="error-icon">X</div>
+
+        <h1>Erro!</h1>
+
+        <p class="confirmation-text">
+            O livro <span class="book-title-confirmation" id="tituloLivro"></span> não foi possivel devolver tente novamente
+        </p>
+
+        <div class="button-spacer">
+            <div class="button-group">
+                <button class="btn btn-primary" id = "devolver">Tentar novamente</button>
+                <button class="btn btn-secondary" id = "finalizar">Finalizar Sessão</button>
+            </div>
+        </div>
+    </div>
+    <script src="livro_nao_devolvido.js"></script>
+
+</body>
+</html>
