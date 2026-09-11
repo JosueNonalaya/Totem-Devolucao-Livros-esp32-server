@@ -65,6 +65,18 @@ O ESP32 atua como o servidor da aplicação.
 7. O sistema registra o livro como devolvido.
 8. O LED verde indica uma devolução realizada com sucesso.
 
+## Demonstração
+
+O sistema apresenta um fluxo simples de identificação, seleção e devolução do livro.
+
+| 1. Tela inicial | 2. Tela de empréstimos |
+|:---:|:---:|
+| ![Tela inicial](imgs/tela-inicio.png) | ![Tela de empréstimos](imgs/tela-emprestimos.png) |
+
+| 3. Leitura do sensor | 4. Devolução concluída |
+|:---:|:---:|
+| ![Leitura do sensor](imgs/tela-sensor.png) | ![Devolução concluída](imgs/tela-sucesso.png) |
+
 ## Estrutura do Projeto
 
 ```text
